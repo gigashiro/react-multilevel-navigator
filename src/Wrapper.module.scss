@@ -1,0 +1,11 @@
+.wrapper {
+  align-content: space-between;
+  align-items: top;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  font-weight: normal;
+  justify-content: center;
+  transition: all 0.5s;
+}

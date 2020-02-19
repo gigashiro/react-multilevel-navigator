@@ -1,0 +1,32 @@
+.navitem {
+  background-color: #ccc;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 5px;
+  padding: 30px;
+  transition: all 0.5s, font-size 0s;
+
+  &:hover {
+    margin: 0;
+    padding: 35px;
+  }
+}
+
+.hiddenItem {
+  font-size: 0 !important;
+  margin: 0;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.selectedItem {
+  min-width: 100%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
