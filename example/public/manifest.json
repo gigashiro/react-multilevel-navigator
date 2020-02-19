@@ -1,0 +1,8 @@
+{
+  "short_name": "react-multilevel-navigator",
+  "name": "react-multilevel-navigator",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
