@@ -56,7 +56,9 @@ export const NavItem: React.FunctionComponent<NavItem> = ({
     isSelected = hasSelection.value === id
   }
 
-  const additionalClass = hasSelection ? (isSelected ? moduleStyles.selectedItem : moduleStyles.hiddenItem) : ''
+  const selectedItemClass = classnames(moduleStyles.selectedItem, (styles.selectedItem || ''))
+  const hiddenItemClass = classnames(moduleStyles.hiddenItem, (styles.hiddenItem || ''))
+  const additionalClass = hasSelection ? (isSelected ? selectedItemClass : hiddenItemClass) : ''
 
   return (
     <>
@@ -65,7 +67,8 @@ export const NavItem: React.FunctionComponent<NavItem> = ({
           moduleStyles.navitem,
           styles[`level-${level}`] ? styles[`level-${level}`] : `level-${level}`,
           additionalClass,
-          className
+          className,
+          (styles.navitem || ''),
         )}
         onClick={selectItem(id, action, itemHandler)}
       >

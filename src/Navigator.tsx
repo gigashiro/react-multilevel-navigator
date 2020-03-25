@@ -1,4 +1,5 @@
 import * as React from 'react'
+import classnames from 'classnames'
 import Wrapper from './Wrapper'
 import { NavItem, NavSelection } from './NavItem'
 import moduleStyles from './Navigator.module.scss'
@@ -49,7 +50,10 @@ export const Navigator: React.FunctionComponent<INavigator> = ({
       if (clickHandler) clickHandler(selectList, event, id, action)
     }
 
-  return <Wrapper className={hasSelection ? moduleStyles.selectedWrapper : ''}>
+  return <Wrapper className={classnames(
+    (hasSelection ? moduleStyles.selectedWrapper : ''),
+    (styles.selectedWrapper || ''),
+  )}>
     {data.map(
       ({action, id, label, subitems}: NavItem) =>
         <NavItem
