@@ -7,6 +7,8 @@ import moduleStyles from './Navigator.module.scss'
 export interface INavigator {
   data: NavItem[]
   clickHandler?: NavigatorHandler
+  close?: string | React.ReactElement
+  expand?: string | React.ReactElement
   level?: number
   selected?: NavSelection[]
   styles?: any // @TODO: tipar
@@ -22,6 +24,8 @@ export type NavigatorHandler = (
 export const Navigator: React.FunctionComponent<INavigator> = ({
   data,
   clickHandler,
+  close,
+  expand,
   level=0,
   selected=[],
   styles={},
@@ -59,6 +63,8 @@ export const Navigator: React.FunctionComponent<INavigator> = ({
         <NavItem
           action={action}
           clickHandler={clickHandler}
+          close={close}
+          expand={expand}
           id={id}
           itemHandler={handleGroup(
             level,

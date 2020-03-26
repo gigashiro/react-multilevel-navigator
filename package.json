@@ -1,6 +1,6 @@
 {
   "name": "react-multilevel-navigator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React component to navigate incrementally through a multilevel (tree) object",
   "author": "gigashiro",
   "license": "MIT",
