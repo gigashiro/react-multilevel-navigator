@@ -28,10 +28,7 @@ export default {
   plugins: [
     external(),
     postcss({
-      extract: true,
-      minimize: true,
-      modules: true,
-      sourceMap: true
+      modules: true
     }),
     url(),
     svgr(),

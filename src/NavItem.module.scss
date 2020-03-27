@@ -1,5 +1,4 @@
 .navitem {
-  background-color: #ccc;
   cursor: pointer;
   flex-grow: 1;
   flex-shrink: 1;
@@ -28,8 +27,6 @@
 }
 
 .selectedItem {
-  min-width: 100%;
-
   &:hover {
     opacity: 0.8;
   }
